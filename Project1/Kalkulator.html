@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="hasil">
+      <div class="header"><h1>Hasil</h1></div>
+      <div class="content-hasil">
+        <img src="Cuplikan layar 2023-03-26 185615.png" alt="" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="codingaan">
+        <div class="header-coding"><h2>PHP</h2></div>
+        <div class="codingan-content">
+          <xmp class="text">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Membuat Kalkulator Sederhana Dengan PHP</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <?php
+    if(isset($_POST['hitung'])) {
+        $bil1 =$_POST['bil1'];
+        $bil2 =$_POST['bil2'];
+        $operasi =$_POST['operasi'];
+        switch ($operasi) {
+        case 'tambah':
+        $hasil =$bil1+$bil2;
+        break;
+        case 'kurang':
+        $hasil =$bil1-$bil2;
+        break;
+        case 'kali':
+        $hasil =$bil1*$bil2;
+        break;
+        case 'bagi':
+        $hasil =$bil1/$bil2;
+        break;
+        }
+    }
+?>
+<div class="kalkulator">
+    <h2 class="judul">KALKULATOR</h2>
+    <a class="brand" href="http://smkn2mgl.sch.id/">
+        http://smkn2mgl.sch.id/</a>
+        <form method="post" action="index.php">
+            <input type="text" name="bil1" class="bil" autocomplete="off" placeholder="Masukan Bilangan Pertama">
+            <input type="text" name="bil2" class="bil" autocomplete="off" placeholder="Masukan Bilangan Kedua">
+            <select class ="opt" name="operasi">
+                <option value='tambah'>+</option>
+                <option value='kurang'>-</option>
+                <option value='kali'>x</option>
+                <option value='bagi'>/</option>
+            </select>
+            <input type="submit" name="hitung" value="Hitung" class="tombol">
+        </form>
+        <?php if(isset($_POST['hitung'])) { ?>
+            <input type="submit" value="<?php echo $hasil; ?>" class="bil">
+        <?php } else { ?>
+            <input type="text" value="0" class="bil">
+        <?php } ?>
+        <button type="submit" onclick="location.href = ''" class="tombol">Clear</button>
+        <h2 class="brand">XICRTH</h2>
+        
+</div>
+</body>
+</html>
+          </xmp>
+        </div>
+      </div>
+
+      <div class="codingaan">
+        <div class="header-coding"><h2>CSS</h2></div>
+        <div class="codingan-content">
+          <xmp class="text">
+            body{
+              background: linear-gradient(270deg, transparent, #222831);
+              font-family: 'Roboto Slab', serif;
+            }
+             
+            .kalkulator{
+              width: 335px;
+              background: #4d1b94;
+              margin: 100px auto;
+              padding: 10px 20px 50px 20px;
+              border-radius: 20px;
+              box-shadow: 0px 10px 20px 0px #6b0ca6;
+            }
+            
+            .kalkulator h2 {
+              color: white;
+              text-align: center;
+            }
+            
+            .kalkulator a {
+              color: white;
+            }
+             
+            .bil{
+              width: 300px;
+              margin: 5px;
+              border: none;
+              font-size: 16pt;
+              border-radius: 5px;
+              padding: 10px;	
+            }
+             
+            .opt{
+              font-size: 16pt;
+              border: none;
+              width: 215px;
+              margin: 5px;
+              border-radius: 5px;
+              padding: 10px;
+            }
+             
+            .tombol{
+              background: #6b0ca6;
+              border-top: none;
+              border-right: none;
+              border-left: none;
+              border-radius: 5px;
+              padding: 10px 20px;
+              color: #eee;
+              font-size: 15pt;
+              border-bottom:4px solid white;
+            }
+             
+            .brand{
+              color: #906D4F;
+              font-size: 11pt;
+              float: right;
+              text-decoration: none;
+              margin: 12px;
+            }
+             
+            
+          </xmp>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

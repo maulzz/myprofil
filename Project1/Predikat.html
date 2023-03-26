@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KELULUSAN</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="hasil">
+      <div class="header"><h1>Hasil</h1></div>
+      <div class="content-hasil">
+        <img src="Cuplikan layar 2023-03-26 191419.png" alt="" />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="codingaan">
+        <div class="header-coding"><h2>PHP</h2></div>
+        <div class="codingan-content">
+          <xmp class="text">
+          <form action="" method="POST">
+    PROGRAM CEK KELULUSAN<br>
+    Nilai Ujian : <input type="text" name="nilai">
+    <input type="submit" value="hasil">
+  </form>
+  <?php
+    if ($_POST)
+    {
+      $nilai = $_POST['nilai'];
+      if ($nilai >= 90)
+      {
+        $grade = "A+";
+        $keterangan = "LULUS";
+      }
+      elseif ($nilai >= 80)
+      {
+        $grade = "A";
+        $keterangan = "LULUS";
+      }
+      if ($nilai >= 70)
+      {
+        $grade = "B";
+        $keterangan = "LULUS";
+      }
+      if ($nilai >= 60)
+      {
+        $grade = "C";
+        $keterangan = "LULUS";
+      }
+      else 
+      {
+        $grade = "D";
+        $keterangan = "TIDAK LULUS";
+      }
+      echo "Hasil Kelulusan";
+      echo "<br>";
+      echo "Nilai : " . $nilai;
+      echo "<br>";
+      echo "Keterangan : " . $keterangan;
+      echo "<br>";
+      echo "Indeks Prestasi :" . $grade;
+      
+    }
+  ?>
+
+          </xmp>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
