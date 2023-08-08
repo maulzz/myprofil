@@ -12,25 +12,50 @@ html {
 body {
   background-color: #222831;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .container {
   padding: 10px 20px;
 }
 
+#header {
+  width: 100%;
+}
+
 nav {
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 20px;
   background-color: #393e46;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 2;
+  animation: nav 1.5s;
+}
+
+@keyframes nav {
+  from {
+    transform: translateY(-50px);
+    opacity: 20%;
+  }
+
+  to {
+    transform: translateY(0px);
+  }
 }
 
 .logo {
+  left: 40px;
   width: 10%;
   position: absolute;
+}
+
+.logo h1 {
+  font-size: 40px;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 nav ul {
@@ -54,15 +79,16 @@ nav ul li a::after {
   content: "";
   width: 0;
   height: 3px;
-  background: crimson;
+  background: rgb(220, 20, 60);
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: -6px;
   transition: 0.5s;
 }
 
 nav ul li a:hover::after {
   width: 100%;
+  left: 0;
 }
 
 .child-toggle {
@@ -93,6 +119,14 @@ nav ul li a:hover::after {
 
 .content-home {
   z-index: 1;
+  animation: content-home 2s;
+}
+
+@keyframes content-home {
+  from {
+    transform: translateX(-100px);
+    opacity: 20%;
+  }
 }
 
 .content-home h2 {
@@ -128,16 +162,24 @@ nav ul li a:hover::after {
 .content-space {
   display: flex;
   align-items: center;
+  animation: cspace 2s;
+}
+
+@keyframes cspace {
+  from {
+    transform: translateX(100px);
+    opacity: 20%;
+  }
 }
 
 .content-space h1 i {
   color: crimson;
 }
 
-#me {
+#me { 
   height: 75vh;
   display: flex;
-  padding: 150px 50px;
+  padding: 7% 10%;
 }
 
 .img-me {
@@ -159,7 +201,7 @@ nav ul li a:hover::after {
 
 .img-me img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   border-radius: 10px;
   transition: all 0.5s ease-out;
 }
@@ -176,7 +218,7 @@ nav ul li a:hover::after {
 
 .about-me {
   width: 50%;
-  margin-left: 150px;
+  margin: 5%;
 }
 
 .about-me h1 {
@@ -225,20 +267,19 @@ nav ul li a:hover::after {
   height: 3px;
   background: crimson;
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: -6px;
   transition: 0.5s;
 }
 
 .about-me-content a:hover::after {
   width: 100%;
+  left: 0;
 }
 
 #skils-header {
   display: flex;
-  margin: 0px 50px;
-  padding-bottom: 50px;
-  padding-top: 12vh;
+  padding-top: 6vh;
 }
 
 #skils-header h1 {
@@ -252,75 +293,38 @@ nav ul li a:hover::after {
 }
 
 #skils-content {
-  height: 100vh;
+  height: 60vh;
   margin: 0px 40px;
   display: flex;
-}
-.skils-left {
-  margin: 0px auto;
-  width: 45%;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-skilsleft {
+.skils-isi {
+  background-color: #222831;
+  border-radius: 50px 5px;
   display: flex;
+  justify-content: center;
+  width: 40%;
+  align-items: center;
+  height: 40vh;
+  border: 5px solid crimson;
 }
 
-.header-skilsleft h1 {
-  font-size: 35px;
-  margin: 0px auto;
-}
-
-.content-skilsleft {
-  margin-top: 50px;
-}
-
-.skils {
-  width: 100%;
-  max-width: 600px;
+.skils-isi ul {
+  list-style: none;
   padding: 20px 20px;
 }
 
-.skils-name {
+.skils-isi ul li {
+  text-align: center;
+  margin-top: 10px;
   font-size: 20px;
-  font-weight: 700;
-  color: white;
-  text-transform: uppercase;
-  margin: 20px 0;
-}
-
-.skils-bar {
-  height: 14px;
-  background: #fff;
-  border-radius: 3px;
-}
-
-.skils-per {
-  height: 14px;
-  background: crimson;
-  border-radius: 3px;
-  position: relative;
-}
-
-.skils-per::before {
-  content: attr(per);
-  position: absolute;
-  padding: 4px 5px;
-  color: white;
-  border-radius: 12px;
-  left: 0;
-  top: -8px;
-}
-
-.skils-right {
-  margin: 0px auto;
-  width: 45%;
 }
 
 #project-header {
   display: flex;
-  margin: 0px 50px;
-  padding-bottom: 50px;
-  padding-top: 12vh;
+  padding-top: 6vh;
 }
 
 #project-header h1 {
@@ -351,10 +355,10 @@ nav ul li a:hover::after {
   margin: 20px auto;
   position: relative;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .card img {
-  padding-top: 10px;
   border-radius: 10px;
   width: 300px;
   height: 100%;
@@ -390,7 +394,7 @@ nav ul li a:hover::after {
 }
 
 .card:hover .img-title {
-  height: 98%;
+  height: 100%;
   transition: 0.5s ease-out;
 }
 
@@ -408,9 +412,17 @@ nav ul li a:hover::after {
   }
 
   #me {
-    height: 150vh;
+    padding-top: 15vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+
+  .img-me {
+    display: flex;
+    width: 100%;
+    justify-content: center;
   }
 
   .img-me::before {
@@ -420,15 +432,15 @@ nav ul li a:hover::after {
     z-index: -1;
     margin-top: -30px;
     border: 5px solid crimson;
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
     transition: all 0.5s ease-out;
     border-radius: 10px;
   }
 
   .img-me img {
-    height: 20rem;
-    width: 20rem;
+    height: 18rem;
+    width: 18rem;
   }
 
   .about-me {
@@ -461,40 +473,38 @@ nav ul li a:hover::after {
     font-size: 25px;
   }
 
+  #skils-header  {
+    padding-top: 22vh;
+  }
+
   #skils-content {
     display: flex;
     flex-direction: column;
-    height: 150vh;
+    height: 50vh;
   }
 
-  .header-skilsleft h1 {
-    font-size: 20px;
-  }
-
-  .skils-left {
+  .skils-isi {
     margin: 0px;
     width: 100%;
-  }
-
-  .skils-right {
-    margin: 50px 0px;
-    width: 100%;
-  }
-
-  .skils-name {
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
-    text-transform: uppercase;
-    margin: 20px 0;
   }
 
   #project-header h1 {
     font-size: 25px;
   }
 
+  #project-header  {
+    padding-top: 12vh;
+  }
+
   .project {
+    display: flex;
+    flex-direction: column;
     height: 310vh;
+    width: 100%;
+  }
+
+  .project-main {
+    justify-content: center;
   }
 
   .img-title {
@@ -502,12 +512,17 @@ nav ul li a:hover::after {
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 768px) {
   html {
     overflow-x: hidden;
   }
   .logo {
+    left: 20px;
     width: 30%;
+  }
+
+  .logo h1 {
+    font-size: 30px;
   }
 
   nav ul {

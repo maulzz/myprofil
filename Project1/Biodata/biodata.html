@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Biodata</title>
+</head>
+<body>
+  <table border="0">
+  <form action="hasil.php" method="post">
+    <tr>
+      <td>NIS</td>
+      <td>:</td>
+      <td><input type="text" name="NIS"></td>
+    </tr>
+
+    <tr>
+    <td>Nama Lengkap</td>
+      <td>:</td>
+      <td><input type="text" name="Nama"></td>
+    </tr>
+
+    <tr>
+      <td>Lama Studi di SMKN 2 Magelang</td>
+        <td>:</td>
+        <td><input type="text" name="Tahun" size="5">Tahun <input type="text" name="Bulan" size="5">Bulan</td>
+      </tr>
+
+    <tr>
+      <td>Nilai rata rata rapot SMP</td>
+      <td>:</td>
+      <td><input type="text" name="IPK" size="5"></td>
+    </tr>
+
+    <tr>
+      <td>Jurusan</td>
+      <td>:</td>
+        <td>
+          <input type="radio" name="jurusan" value="PPLG">PPLG
+          <input type="radio" name="jurusan" value="AKL">AKL
+          <input type="radio" name="jurusan" value="MPLB">MPLB
+          <input type="radio" name="jurusan" value="PM">PM
+        </td>
+    </tr>
+
+    <tr>
+      <td>Tempat dan Tanggal Lahir </td>
+      <td>:</td>
+      <td><input type="text" name="Tempat" size="15">
+          <input type="date" name="tgl" size="15">
+      </td>
+    </tr>
+
+    <tr>
+      <td>Jenis Kelamin</td>
+      <td>:</td>
+      <td><input type="radio" name="JK" value="Laki-laki">Laki-laki<input type="radio" name="JK" value="Perempuan">Perempuan</td>
+    </tr>
+
+    <tr>
+      <td>Alamat</td>
+      <td>:</td>
+      <td><input type="textfield" name="alamat"></td>
+    </tr>
+
+    <tr>
+      <td>tentang Anda</td>
+      <td>:</td>
+      <td><textarea name="tentang"  cols="22" rows="5"></textarea></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td></td>
+      <td><input type="submit" name="submit" value="INPUT DATA">
+      <input type="reset" name="reset" value="BERSIH"></td>
+    </tr>    
+  </form>
+  </table>
+</body>
+</html>

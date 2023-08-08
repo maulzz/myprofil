@@ -1,0 +1,61 @@
+body{
+	background: linear-gradient(270deg, transparent, #222831);
+	font-family: 'Roboto Slab', serif;
+}
+ 
+.kalkulator{
+	width: 335px;
+	background: #4d1b94;
+	margin: 100px auto;
+	padding: 10px 20px 50px 20px;
+	border-radius: 20px;
+	box-shadow: 0px 10px 20px 0px #6b0ca6;
+}
+
+.kalkulator h2 {
+	color: white;
+	text-align: center;
+}
+
+.kalkulator a {
+	color: white;
+}
+ 
+.bil{
+	width: 300px;
+	margin: 5px;
+	border: none;
+	font-size: 16pt;
+	border-radius: 5px;
+	padding: 10px;	
+}
+ 
+.opt{
+	font-size: 16pt;
+	border: none;
+	width: 215px;
+	margin: 5px;
+	border-radius: 5px;
+	padding: 10px;
+}
+ 
+.tombol{
+	background: #6b0ca6;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	color: #eee;
+	font-size: 15pt;
+	border-bottom:4px solid white;
+}
+ 
+.brand{
+	color: #906D4F;
+	font-size: 11pt;
+	float: right;
+	text-decoration: none;
+	margin: 12px;
+}
+ 

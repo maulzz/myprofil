@@ -33,11 +33,28 @@ body {
   width: 90%;
 }
 
-
 .content-hasil img {
   margin: 0px auto;
   width: 100%;
   height: 300px;
+}
+
+.live-privew {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.live-privew a {
+  display: flex;
+  background-color: crimson;
+  width: 10%;
+  font-size: 20px;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .container {
@@ -87,5 +104,9 @@ body {
 
   .codingaan {
     width: 90%;
+  }
+
+  .live-privew {
+    width: 35%;
   }
 }
